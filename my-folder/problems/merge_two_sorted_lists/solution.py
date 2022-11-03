@@ -4,17 +4,22 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def mergeTwoLists(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        head = sortedList = ListNode()
-        while l1 and l2:
-            if l1.val <= l2.val:
-                sortedList.next = l1
-                l1 = l1.next
-                sortedList = sortedList.next
-            else:
-                sortedList.next = l2
-                l2 = l2.next
-                sortedList = sortedList.next
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        head = finalList = ListNode()
+        while list1 and list2:
+            if list1.val <= list2.val:
+                finalList.next = list1
+                list1 = list1.next
+                finalList = finalList.next
                 
-        sortedList.next = l1 or l2
+            else:
+                finalList.next = list2
+                list2 = list2.next
+                finalList = finalList.next
+                
+        
+        finalList.next = list1 or list2
+            
         return head.next
+        
+            
