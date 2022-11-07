@@ -3,6 +3,21 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
+        nums1[m:] = nums2[:]
+        nums1.sort()
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         #a, b, write_index = m-1, n-1, m + n - 1
         #while b >= 0:
         #    if a >= 0 and nums1[a] > nums2[b]:
@@ -14,7 +29,3 @@ class Solution:
                 
         #    write_index -= 1
         
-        
-        
-        nums1[m:] = nums2[:]
-        nums1.sort()
