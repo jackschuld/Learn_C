@@ -1,8 +1,10 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        if x < 0:
-            return False
-        
-        return str(x) == str(x)[::-1]
-            
-        
+        x = str(x)
+        while len(x) > 1:
+            print(x)
+            if x[0] != x[-1]:
+                return False
+            else:
+                x = x[1:-1]
+        return True
