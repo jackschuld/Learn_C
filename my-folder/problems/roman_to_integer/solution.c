@@ -3,29 +3,33 @@ int romanToInt(char* s) {
     int result[size]; 
     int count = 0;
 
-    for (int i = 0; i < size; i++) {
-        if (s[i]=='I') {
+for (int i = 0; i < size; i++) {
+    switch (s[i]) {
+        case 'I':
             result[i] = 1;
-            }
-        else if (s[i]=='V') {
+            break;
+        case 'V':
             result[i] = 5;
-            }
-        else if (s[i]=='X') {
+            break;
+        case 'X':
             result[i] = 10;
-            }
-        else if (s[i]=='L') {
+            break;
+        case 'L':
             result[i] = 50;
-        }
-        else if (s[i]=='C') {
+            break;
+        case 'C':
             result[i] = 100;
-        }
-        else if (s[i]=='D') {
+            break;
+        case 'D':
             result[i] = 500;
-        }
-        else if (s[i]=='M') {
+            break;
+        case 'M':
             result[i] = 1000;
-        }
+            break;
+        default:
+            break;
     }
+}
 
     for (int i = 0; i < size - 1; i++) {
         if (result[i] >= result[i+1]) {
